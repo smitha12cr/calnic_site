@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calnic Solutions - Professional Catalogue Services. Delivering excellence through technology and innovation.">
+    <meta name="keywords" content="catalogue, software development, AI, NLP, Calnic Solutions">
+    <title>About Us - Calnic Solutions</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --dark-navy: #0f172a;
+            --light-bg: #f8fafc;
+            --text-gray: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--light-bg);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        /* Navigation - Enhanced Responsive */
+        .navbar {
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            z-index: 999;
+            background-color: white;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 0.25rem 0;
+        }
+
+        .navbar-brand img {
+            height: 110px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+
+        .navbar.scrolled .navbar-brand img {
+            height: 90px;
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: #00275e !important;
+            margin: 0 0.4rem;
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0.8rem !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-cyan) !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            color: #00275e;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--light-bg);
+            color: var(--accent-cyan);
+            padding-left: 1.2rem;
+        }
+
+        .social-icons a {
+            color: #00275e;
+            margin-left: 0.8rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Navigation Improvements */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+                margin-top: 1rem;
+            }
+
+            .nav-link {
+                margin: 0.5rem 0;
+                padding: 0.5rem 0;
+            }
+
+            .social-icons {
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid #eee;
+            }
+
+            .social-icons a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+        }
+
+        /* Hero Section - Minimalist Premium Refinement */
+        .hero-section {
+            min-height: 80vh;
+            background: linear-gradient(135deg, #00275e 0%, #1e3a8a 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 39, 94, 0.7), rgba(0, 39, 94, 0.7)),
+                url('pictures/Gemini_Generated_Image_5qetn05qetn05qet (1).png') center/cover;
+            z-index: 0;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-10vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-text-wrapper {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-visual {
+            flex: 1;
+            display: none;
+            position: relative;
+            animation: float-visual 6s infinite ease-in-out;
+        }
+
+        @media (min-width: 992px) {
+            .hero-visual {
+                display: block;
+            }
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes float-visual {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(1deg);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            color: #06b6d4;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+        }
+
+        .btn-minimal {
+            padding: 0.9rem 2.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-minimal-primary {
+            background: #06b6d4;
+            color: white;
+            border: 2px solid #06b6d4;
+        }
+
+        .btn-minimal-primary:hover {
+            background: transparent;
+            color: #06b6d4;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .btn-minimal-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-minimal-outline:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: white;
+            clip-path: polygon(0 75%, 100% 0, 100% 100%, 0% 100%);
+            z-index: 3;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Content Sections - Enhanced */
+        .content-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        @media (min-width: 768px) {
+            .content-section {
+                padding: 100px 0;
+            }
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            display: inline-block;
+            position: relative;
+            color: var(--primary-blue);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .content-card:hover .content-image img {
+            transform: scale(1.05);
+        }
+
+        .content-text h3 {
+            color: var(--primary-blue);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .content-text h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .content-text p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-cyan);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-navy));
+            padding: 60px 0;
+            color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--accent-cyan);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 70px 0 30px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--secondary-blue), var(--primary-blue));
+        }
+
+        .footer-brand img {
+            height: 70px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+            transform: translateX(5px);
+        }
+
+        .social-media-wrapper {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-media-wrapper a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-media-wrapper a:hover {
+            background: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+            padding-top: 25px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Heritage Section */
+        .heritage-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        @media (min-width: 768px) {
+            .heritage-section {
+                padding: 100px 0;
+            }
+        }
+
+        .heritage-content h2 {
+            color: #00275e;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .heritage-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-cyan);
+            border-radius: 2px;
+        }
+
+        .heritage-content p {
+            color: #00275e;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .heritage-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .heritage-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .heritage-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Content Image Refinements */
+        .content-image-premium {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+        }
+
+        .content-image-premium:hover {
+            transform: scale(1.02) translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            filter: brightness(1.03);
+        }
+
+        .content-image-premium img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.6s ease;
+        }
+
+        .content-image-premium:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Team Section Redesign */
+        .team-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .team-section .section-header {
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .team-section {
+                padding: 100px 0;
+            }
+        }
+
+        .team-card-large {
+            background: white;
+            padding: 4rem 3rem;
+            min-height: 700px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .team-portrait {
+            width: 180px;
+            height: 220px;
+            border-radius: 30px;
+            object-fit: cover;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border: 8px solid white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-portrait:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: var(--accent-cyan);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-control-prev {
+            left: -25px;
+        }
+
+        .carousel-control-next {
+            right: -25px;
+        }
+
+        @media (max-width: 768px) {
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+                left: 10px;
+                right: auto;
+                top: 100px;
+            }
+
+            .carousel-control-next {
+                left: auto;
+                right: 10px;
+            }
+
+            .team-card-large {
+                padding: 1.5rem;
+            }
+
+            .team-portrait {
+                width: 150px;
+                height: 180px;
+            }
+        }
+
+        .team-bio {
+            color: #00275e;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .first-letter {
+            color: var(--secondary-blue);
+            font-size: 1.4rem;
+            font-weight: 800;
+            float: left;
+            margin-right: 3px;
+            line-height: 1;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #e2e8f0;
+            border-top-color: var(--primary-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-cyan);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+            box-shadow: 0 5px 20px rgba(6, 182, 212, 0.3);
+            border: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .content-text p {
+                text-align: left;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-wave {
+                height: 60px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+
+            .navbar,
+            .footer,
+            .back-to-top,
+            .loader {
+                display: none;
+            }
+
+            .hero-section {
+                min-height: auto;
+                padding: 2rem 0;
+                background: white;
+                color: black;
+            }
+
+            .hero-title,
+            .hero-subtitle {
+                color: black;
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="pictures/logo-big.png" alt="Calnic Solutions Logo"
+                    onerror="this.src='https://via.placeholder.com/180x90/1e3a8a/ffffff?text=CALNIC'">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Software</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="projectmanagement.html"><i
+                                        class="bi bi-kanban me-2"></i>Project Management</a></li>
+                            <li><a class="dropdown-item" href="nlp.html"><i
+                                        class="bi bi-chat-square-text me-2"></i>Natural Language Processing</a></li>
+                            <li><a class="dropdown-item" href="ai.html"><i class="bi bi-cpu me-2"></i>AI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Design</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalogue.html"><i
+                                        class="bi bi-book me-2"></i>Catalogue</a></li>
+                            <li><a class="dropdown-item" href="books.html"><i
+                                        class="bi bi-journal-bookmark me-2"></i>Books</a></li>
+                            <li><a class="dropdown-item" href="logos.html"><i class="bi bi-palette me-2"></i>Logos</a>
+                            </li>
+                            <li><a class="dropdown-item" href="illustration.html"><i
+                                        class="bi bi-brush me-2"></i>Illustration</a></li>
+                            <li><a class="dropdown-item" href="presentation.html"><i
+                                        class="bi bi-easel me-2"></i>Presentation</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="webdesign.html"><i class="bi bi-globe me-2"></i>Web
+                                    Design & Development</a></li>
+                            <li><a class="dropdown-item" href="mobile-app.html"><i class="bi bi-phone me-2"></i>Mobile
+                                    App Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Contact Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bengaluru.html"><i
+                                        class="bi bi-geo-alt me-2"></i>Bangalore</a></li>
+                            <li><a class="dropdown-item" href="kerala.html"><i class="bi bi-geo-alt me-2"></i>Kerala</a>
+                            </li>
+                            <li><a class="dropdown-item" href="betul.html"><i class="bi bi-geo-alt me-2"></i>Betul</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                </ul>
+
+                <div class="social-icons ms-lg-4">
+                    <a href="https://twitter.com/calnicsolution1" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/Calnic-Solutions-102412131936670" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/calnicsolutions/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/calnic-solutions-b003b51ba/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content text-center mx-auto">
+                <h1 class="hero-title">About Us</h1>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section class="heritage-section" id="about">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 reveal">
+                    <div class="heritage-content">
+                        <h2>Who We Are</h2>
+                        <p>
+                            <strong>Calnic Solutions LLP</strong> cherishes good team values helping customers be
+                            sustainable through
+                            technology and innovation in work and management.
+                        </p>
+                        <p>
+                            The village of Câlnic is in Alba County, in the Transylvania region of Romania. The
+                            prominent building
+                            in the village was the Citadel, built in 1270 by a nobleman Graf (Count) Chyl de Kelling,
+                            whose family
+                            later sold it to the local ethnic German Transylvanian Saxon community. This was at a time
+                            when the area
+                            belonged to the Kingdom of Hungary.
+                        </p>
+                        <p>
+                            The Câlnic Castle differs from most other constructions of this type in that it is not
+                            situated on a hilltop
+                            but rather in a depression, much lower than the surrounding hills. It was bought in 1430 by
+                            local peasants and
+                            fortified. It consists of a large court surrounded by walls and some buildings adjacent to
+                            the walls. Once the
+                            Saxon community took ownership, they extended it by building a second fortification wall and
+                            a tower in the
+                            southern part, using the structure for refuge during Ottoman raids.
+                        </p>
+                        <p>
+                            The Câlnic of Alba County is a story of how collaboration and empowerment can withstand any
+                            adversity and be
+                            sustainable. That's what we want to do for our customers. Embed best practices in software
+                            for efficient and cost
+                            effective, time based, achievement of stated goals.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="heritage-image">
+                        <img src="pictures/citadel.png" alt="Câlnic Citadel Heritage"
+                            class="img-fluid content-image-premium" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>The Team</h2>
+            </div>
+
+            <div id="teamCarousel" class="carousel slide reveal" data-bs-ride="carousel" data-bs-interval="6000">
+                <div class="carousel-inner">
+                    <!-- Team Member 1: Manoj -->
+                    <div class="carousel-item active">
+                        <div class="team-card-large">
+                            <img src="pictures/Manoj.jpeg" alt="Manoj - Team Lead" class="team-portrait" loading="lazy">
+                            <div class="team-bio">
+                                <p><span class="first-letter">M</span>anoj has over 25 years of experience in
+                                    organisation building in the areas of marketing communications, e-commerce and ITES
+                                    services. He managed start-up's scaling them across geographies and incubating new
+                                    verticals as the Indian representative for US based venture capital funds. Building
+                                    lean, efficient and result driven organisations with a management pipeline supported
+                                    by management systems embedded in software for growth and sustenance is his
+                                    speciality. Manoj holds a post graduate diploma in mass communications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2: Naomi -->
+                    <div class="carousel-item">
+                        <div class="team-card-large">
+                            <img src="pictures/Naomi.jpeg" alt="Naomi - UX Lead" class="team-portrait" loading="lazy">
+                            <div class="team-bio">
+                                <p><span class="first-letter">N</span>aomi has worked on user-centric enterprise-wide
+                                    software design, deployment and testing for many years. Being a graduate in
+                                    psychology with a diploma in computer graphics, she has been able to anticipate user
+                                    needs critical for change management. She uses it to drive user experience and
+                                    interactive elements in learning tools and investor relations. Naomi leads client
+                                    engagement working with the development and implementation teams. Naomi always had a
+                                    flair for art combining it with sophisticated computer graphics software for design.
+                                    Naomi has been commissioned by publishing houses for story telling and animation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3: Jossy -->
+                    <div class="carousel-item">
+                        <div class="team-card-large">
+                            <img src="pictures/jossy.jpeg" alt="Jossy - Tech Lead" class="team-portrait" loading="lazy">
+                            <div class="team-bio">
+                                <p><span class="first-letter">J</span>ossy holds a post graduate in computer
+                                    applications. He has designed, developed, deployed and tested software modules and
+                                    enterprise-wide systems with over 1000 users across geographies. He has expertise in
+                                    open source software development with server management and security protocols for
+                                    data protection and ease of use. Keeping the user needs in mind, Jossy has designed
+                                    and developed software for iOS, Android and web-based applications using open source
+                                    and the .NET framework. He leads the software development team, liaising with
+                                    clients and implementation teams at every juncture.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4: Sam -->
+                    <div class="carousel-item">
+                        <div class="team-card-large">
+                            <img src="pictures/sam.jpeg" alt="Sam - Linguistics Expert" class="team-portrait"
+                                loading="lazy">
+                            <div class="team-bio">
+                                <p><span class="first-letter">S</span>am holds a doctorate in linguistics and his thesis
+                                    was on situation dependent learning abilities in communities based on their exposure
+                                    to external factors. Sam has worked with numerous communities in South Asia
+                                    documenting their culture, developing orthography, phonology and learning systems.
+                                    Sam understands the change factors that drive transformation in communities and
+                                    workgroups. His expertise is in training, documentation and learning management
+                                    initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5: Christopher -->
+                    <div class="carousel-item">
+                        <div class="team-card-large">
+                            <img src="pictures/christopher.jpeg" alt="Christopher - NLP Expert" class="team-portrait"
+                                loading="lazy">
+                            <div class="team-bio">
+                                <p><span class="first-letter">C</span>hristopher has been working in the field of
+                                    Computational Linguistics, Natural Language Processing and specifically in the area
+                                    of Development of Machine Translation systems and Artificial Intelligence. Worked
+                                    with many State Government and Central Government projects in association with many
+                                    Higher Education Institutes in India. His specialization includes development of
+                                    Language Technology tools for digitally less resourced languages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-brand">
+                        <img src="pictures/logo-white.png" alt="Calnic Solutions Logo"
+                            onerror="this.src='https://via.placeholder.com/180x70/0f172a/ffffff?text=CALNIC'">
+                    </div>
+                    <div class="footer-about">
+                        <p>Calnic Solutions LLP cherishes good team values helping customers be sustainable through
+                            technology and innovation in work and management.</p>
+                    </div>
+                    <div class="social-media-wrapper">
+                        <a href="https://twitter.com/calnicsolution1" target="_blank" rel="noopener noreferrer"
+                            aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.facebook.com/Calnic-Solutions-102412131936670" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/calnicsolutions/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/calnic-solutions-b003b51ba/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="servies.html">Web & Software
+                                    Development</a></li>
+                            <li><a href="servies.html">Project Management</a>
+                            </li>
+                            <li><a href="servies.html">UI/UX Design</a></li>
+                            <li><a href="servies.html">Android & iOS
+                                    Development</a></li>
+                            <li><a href="servies.html">Natural Language
+                                    Processing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="index.html">Our Team</a></li>
+                            <li><a href="servies.html">Services</a></li>
+                            <li><a href="bengaluru.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h4>Locations</h4>
+                        <ul>
+                            <li><a href="bengaluru.html">Bangalore</a></li>
+                            <li><a href="kerala.html">Kerala</a></li>
+                            <li><a href="betul.html">Betul</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 Calnic Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Particle animation
+        const createParticles = () => {
+            const container = document.getElementById('particles');
+            const particleCount = 15;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 8 + 4;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                container.appendChild(particle);
+            }
+        };
+        createParticles();
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Active nav link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animated counters for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + (target === 98 ? '%' : '+');
+                    }
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+
+                observer.observe(counter);
+            });
+        };
+        animateCounters();
+
+        // Form submission handler (placeholder)
+        const handleFormSubmit = (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        };
+
+        // Initialize any forms
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', handleFormSubmit);
+        });
+
+        // Team carousel touch support
+        const carousel = document.getElementById('teamCarousel');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                bootstrap.Carousel.getInstance(carousel).next();
+            }
+            if (touchEndX > touchStartX + 50) {
+                bootstrap.Carousel.getInstance(carousel).prev();
+            }
+        }
+    </script>
+</body>
+
+</html>
